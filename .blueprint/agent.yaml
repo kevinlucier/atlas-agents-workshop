@@ -1,0 +1,76 @@
+# Machine-readable contract for this project's blueprint. Blueprint schema_version 1.0.
+# Derived from file front matter; the files are authoritative.
+
+schema_version: '1.0'
+
+generated:
+  by: hand-authored
+  at: '2026-10-14'
+  tier: local
+
+project:
+  name: atlas-agents-workshop
+  description: Workshop that builds Atlas, a map agent using ADK, MCP, A2A and skills.
+  created: '2026-10-14'
+
+foundation:
+  name: null
+  tier: local
+
+stack:
+  language: python
+  framework: google-adk
+  cloud: google-cloud (optional, Vertex AI)
+  frontend: flask
+  testing: check.py setup check
+  deployment: local; mcp_server optional Cloud Run
+
+extensions: []
+
+packages: {}
+
+blueprint:
+  root: .blueprint
+  documents:
+    - path: README.md
+      category: platform
+      confidence: inferred
+      verified_against: null
+      last_updated: '2026-10-14'
+    - path: platform/architecture.md
+      category: platform
+      confidence: verified
+      verified_against: 'atlas-agents-workshop working tree, 2026-10-14'
+      last_updated: '2026-10-14'
+    - path: platform/development.md
+      category: platform
+      confidence: verified
+      verified_against: 'atlas-agents-workshop working tree, 2026-10-14'
+      last_updated: '2026-10-14'
+    - path: platform/guardrails.md
+      category: platform
+      confidence: inferred
+      verified_against: null
+      last_updated: '2026-10-14'
+    - path: platform/tech-stack.md
+      category: platform
+      confidence: verified
+      verified_against: 'demo1-build/requirements.txt and .env.example, 2026-10-14'
+      last_updated: '2026-10-14'
+    - path: product/product.md
+      category: product
+      confidence: customer-asserted
+      verified_against: null
+      last_updated: '2026-10-14'
+
+capabilities:
+  repository_awareness: true
+  architecture_awareness: true
+  roadmap_awareness: false
+  adr_awareness: false
+  requirements_awareness: false
+  guardrails: true
+  coding_standards: false
+  code_review: false
+  documentation_generation: true
+  security_review: false
